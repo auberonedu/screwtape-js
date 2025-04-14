@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Screwtape Visualizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>Screwtape Visualizer</h1>
+
+  <div class="program-input">
+    <label for="program">Program:</label><br>
+    <textarea id="program" rows="5" cols="60">+++++++++[&gt;++++++++&lt;-]&gt;.&gt;++++++[&lt;+++++&gt;-]&lt;+++.</textarea>
+  </div>
+
+  <div class="controls">
+    <button id="runBtn">Run</button>
+    <button id="stepBtn">Step</button>
+    <button id="pauseBtn">Pause</button>
+    <button id="resetBtn">Reset</button>
+    <div class="speed-control">
+      <label for="speedSlider">Speed (ms per step): </label>
+      <input type="range" id="speedSlider" min="0" max="1000" step="5" value="300">
+      <span id="speedValue">300</span> ms
+    </div>
+  </div>
+
+  <div class="program-display" id="programDisplay"></div>
+
+  <div class="output-section">
+    <div>
+      <strong>Output:</strong>
+      <span id="output"></span>
+    </div>
+  </div>
+
+  <div class="tape-container">
+    <h2>Memory Tape</h2>
+    <div id="tape"></div>
+  </div>
+
+  <script src="screwtape.obf.js"></script>
+</body>
+</html>
